@@ -1,4 +1,4 @@
-package com.smartdealer.core;
+package com.smartdealer.core.models;
 
 /**
  * AUTHOR : CHHAI CHIVON
