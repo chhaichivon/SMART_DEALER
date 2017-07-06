@@ -6,5 +6,5 @@ package com.smartdealer.core.services;
  * DATE   : 7/4/2017
  * TIME   : 7:43 PM
  */
-public class BaseService {
+public interface BaseService {
 }
