@@ -2,8 +2,11 @@ package com.smartdealer.ui;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.servlet.annotation.WebServlet;
 
+import com.smartdealer.core.models.User;
+import com.smartdealer.core.services.user.UserServiceImp;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.FontAwesome;
@@ -34,8 +37,20 @@ public class MainUI extends UI {
     private TextField filterText = new TextField();
     private CustomerForm form = new CustomerForm(this);
 
+    @Inject
+    private UserServiceImp userServiceImp;
+
     @Override
     protected void init(VaadinRequest vaadinRequest) {
+
+
+       /* if(userServiceImp.getListUsers() != null){
+            for(User user : userServiceImp.getListUsers()){
+                System.out.print(user.getFirstName());
+            }
+        }
+*/
+
         final VerticalLayout layout = new VerticalLayout();
 
         filterText.setPlaceholder("filter by name...");
@@ -88,9 +103,9 @@ public class MainUI extends UI {
         grid.setItems(customers);
     }
 
-    @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
+    @WebServlet(urlPatterns = "/*", name = "main", asyncSupported = true)
     @VaadinServletConfiguration(ui = MainUI.class, productionMode = false)
-    public static class MyUIServlet extends VaadinServlet {
+    public static class main extends VaadinServlet {
 
     }
 }

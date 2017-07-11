@@ -41,11 +41,6 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.smartdealer</groupId>
-				<artifactId>smart-dealer-core</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>com.vaadin</groupId>
 				<artifactId>vaadin-bom</artifactId>
 				<version>${vaadin.version}</version>
@@ -56,6 +51,11 @@
 	</dependencyManagement>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.smartdealer</groupId>
+			<artifactId>smart-dealer-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -78,8 +78,13 @@
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-themes</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>th.co.grouplease.smartdealer</groupId>
+            <artifactId>smart-dealer-share</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>

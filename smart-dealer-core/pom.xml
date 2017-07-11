@@ -244,6 +244,12 @@
 			<version>${springsecurity.version}</version>
 		</dependency>
 
+		<!--JPA-->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>1.11.4.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>

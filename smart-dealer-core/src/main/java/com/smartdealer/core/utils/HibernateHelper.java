@@ -8,10 +8,10 @@ import org.hibernate.cfg.Configuration;
 /**
  * AUTHOR : CHHAI CHIVON
  * EMAIL  : chhaichivon1995@gmail.com
- * DATE   : 7/4/2017
- * TIME   : 7:45 PM
+ * DATE   : 7/11/2017
+ * TIME   : 2:10 PM
  */
-public class HibernateUtil {
+public class HibernateHelper {
     private static final SessionFactory sessionFactory = buildSessionFactory();
     // hibernate.cfg.xml
     /*private static SessionFactory buildSessionFactory(){
